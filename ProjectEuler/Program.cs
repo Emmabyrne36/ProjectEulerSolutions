@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace ProjectEuler
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine(ProjEuler1());
             Console.WriteLine(ProjEuler2());
@@ -53,8 +53,6 @@ namespace ProjectEuler
 
         public static int Fib(int n)
         {
-            //Console.Write("The number is: ");
-            //Console.WriteLine(n);
             return n <= 1 ? n : Fib(n - 1) + Fib(n - 2);
         }
 
