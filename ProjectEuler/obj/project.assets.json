@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emma.byrne\\.nuget\\packages\\": {},
+    "C:\\Users\\Emma\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\emma.byrne\\Documents\\Visual Studio 2017\\Projects\\ProjectEuler\\ProjectEuler\\ProjectEuler.csproj",
+      "projectUniqueName": "C:\\Users\\Emma\\source\\repos\\ProjectEuler\\ProjectEuler\\ProjectEuler.csproj",
       "projectName": "ProjectEuler",
-      "projectPath": "C:\\Users\\emma.byrne\\Documents\\Visual Studio 2017\\Projects\\ProjectEuler\\ProjectEuler\\ProjectEuler.csproj",
-      "packagesPath": "C:\\Users\\emma.byrne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\emma.byrne\\Documents\\Visual Studio 2017\\Projects\\ProjectEuler\\ProjectEuler\\obj\\",
+      "projectPath": "C:\\Users\\Emma\\source\\repos\\ProjectEuler\\ProjectEuler\\ProjectEuler.csproj",
+      "packagesPath": "C:\\Users\\Emma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Emma\\source\\repos\\ProjectEuler\\ProjectEuler\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\emma.byrne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Emma\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

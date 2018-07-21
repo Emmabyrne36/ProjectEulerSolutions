@@ -15,3 +15,20 @@ C:\Users\emma.byrne\Documents\Visual Studio 2017\Projects\ProjectEuler\ProjectEu
 C:\Users\emma.byrne\Documents\Visual Studio 2017\Projects\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.csproj.CopyComplete
 C:\Users\emma.byrne\Documents\Visual Studio 2017\Projects\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.dll
 C:\Users\emma.byrne\Documents\Visual Studio 2017\Projects\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.pdb
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\ProjectEulerTests.deps.json
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\ProjectEulerTests.runtimeconfig.json
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\ProjectEulerTests.runtimeconfig.dev.json
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\ProjectEulerTests.dll
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\ProjectEulerTests.pdb
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\ProjectEuler.dll
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\bin\Debug\netcoreapp2.0\ProjectEuler.pdb
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.csprojAssemblyReference.cache
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.csproj.CoreCompileInputs.cache
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.AssemblyInfoInputs.cache
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.AssemblyInfo.cs
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.csproj.CopyComplete
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.dll
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEulerTests\obj\Debug\netcoreapp2.0\ProjectEulerTests.pdb

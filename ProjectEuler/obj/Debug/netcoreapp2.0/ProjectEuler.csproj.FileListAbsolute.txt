@@ -9,3 +9,14 @@ C:\Users\emma.byrne\Documents\Visual Studio 2017\Projects\ProjectEuler\ProjectEu
 C:\Users\emma.byrne\Documents\Visual Studio 2017\Projects\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.AssemblyInfo.cs
 C:\Users\emma.byrne\Documents\Visual Studio 2017\Projects\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.dll
 C:\Users\emma.byrne\Documents\Visual Studio 2017\Projects\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.pdb
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.deps.json
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.runtimeconfig.json
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.runtimeconfig.dev.json
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.dll
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.pdb
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.csprojAssemblyReference.cache
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.csproj.CoreCompileInputs.cache
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.AssemblyInfoInputs.cache
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.AssemblyInfo.cs
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.dll
+C:\Users\Emma\source\repos\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.pdb
