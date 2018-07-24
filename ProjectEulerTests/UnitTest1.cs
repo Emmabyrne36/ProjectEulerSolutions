@@ -18,7 +18,7 @@ namespace ProjectEulerTests
         }
 
         [Fact]
-        public void TsetProjEuler3()
+        public void TestProjEuler3()
         {
             Assert.Equal(6857.ToString(), Program.ProjEuler3().ToString());
         }
@@ -36,7 +36,7 @@ namespace ProjectEulerTests
         }
 
         [Fact]
-        public void TestProjEuler()
+        public void TestProjEuler6()
         {
             Assert.Equal(25164150.ToString(), Program.ProjEuler6().ToString());
         }

@@ -94,5 +94,45 @@ namespace ProjectEuler
         }
         #endregion
 
+        #region ProjectEuler6
+        public static double ProjEuler6()
+        {
+            return GetSquareOfSum(100) - GetSumOfSquares(100);
+        }
+        public static double GetSumOfSquares(int n)
+        {
+            double totalSum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                totalSum += Math.Pow(i, 2);
+            }
+
+            return totalSum;
+        }
+
+        public static double GetSquareOfSum(int n)
+        {
+            double totalSquare = 0;
+            for (int i = 0; i <= n; i++)
+            {
+                totalSquare += i;
+            }
+            return Math.Pow(totalSquare, 2);
+        }
+
+        public static double ProjectEuler6()
+        {
+            double totalSumOfSquares = 0;
+            double totalSquareOfSums = 0;
+            for (int i = 1; i <= 100; i++)
+            {
+                totalSumOfSquares += i * i;
+                totalSquareOfSums += i;
+            }
+
+            return (totalSquareOfSums*totalSquareOfSums) - totalSumOfSquares;
+        }
+        #endregion
+
     }
 }
