@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ProjectEuler
+namespace ProjectectEuler
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine(ProjEuler1());
-            Console.WriteLine(ProjEuler2());
-            Console.WriteLine(ProjEuler3());
-            Console.WriteLine(ProjEuler4_WhileLoop());
-            Console.WriteLine(ProjEuler5());
-            Console.WriteLine(ProjEuler6());
+            Console.WriteLine(ProjectEuler1());
+            Console.WriteLine(ProjectEuler2());
+            Console.WriteLine(ProjectEuler3());
+            Console.WriteLine(ProjectEuler4_WhileLoop());
+            Console.WriteLine(ProjectEuler5());
+            Console.WriteLine(ProjectEuler6());
             Console.Read();
         }
-
-        #region ProjEuler1
-        public static int ProjEuler1() // Multiples of 3 and 5
+        //======================================== Problem 1 ==========================================================
+        #region ProjectEuler1
+        public static int ProjectEuler1() // Multiples of 3 and 5
         {
 
             int totalSum = 0;
@@ -34,8 +34,9 @@ namespace ProjectEuler
         }
         #endregion
 
-        #region ProjEuler2
-        public static int ProjEuler2() // Even Fibonacci numbers
+        //======================================== Problem 2 ==========================================================
+        #region ProjectEuler2
+        public static int ProjectEuler2() // Even Fibonacci numbers
         {
             int first = 0, next = 1, result = 0, sumValues = 0;
 
@@ -53,10 +54,11 @@ namespace ProjectEuler
         }
         #endregion
 
-        #region ProjEuler3
+        //======================================== Problem 3 ==========================================================
+        #region ProjectEuler3
         // The prime factors of 13195 are 5, 7, 13 and 29.
         // Get largest prime factor of 600851475143
-        public static long ProjEuler3()
+        public static long ProjectEuler3()
         {
             long n = 600851475143;
             List<long> primeFactors = new List<long>();
@@ -90,8 +92,9 @@ namespace ProjectEuler
 
         #endregion
 
-        #region ProjEuler4
-        public static int ProjEuler4_WhileLoop() // LargestPalindromeProduct
+        //======================================== Problem 4 ==========================================================
+        #region ProjectEuler4
+        public static int ProjectEuler4_WhileLoop() // LargestPalindromeProduct
         {
             /*
             * A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
@@ -117,7 +120,7 @@ namespace ProjectEuler
             return maxNum;
         }
 
-        public static int ProjEuler4_ForLoop()
+        public static int ProjectEuler4_ForLoop()
         {
             int i, j, result, maxNum = 0;
 
@@ -149,8 +152,9 @@ namespace ProjectEuler
         }
         #endregion
 
-        #region ProjeEuler5
-        public static int ProjEuler5() // Smallest multiple
+        //======================================== Problem 5 ==========================================================
+        #region ProjectEuler5
+        public static int ProjectEuler5() // Smallest multiple
         {
             // 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
             // What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
@@ -186,18 +190,19 @@ namespace ProjectEuler
         }
         #endregion
 
-        #region ProjEuler6
-        public static double ProjEuler6()
+        //======================================== Problem 6 ==========================================================
+        #region ProjectEuler6
+        public static double ProjectEuler6()
         {
-            double totalSum = 0;
-            double totalSquare = 0;
+            double totalSumOfSquares = 0;
+            double totalSquareOfSums = 0;
             for (int i = 1; i <= 100; i++)
             {
-                totalSum += Math.Pow(i, 2);
-                totalSquare += i;
+                totalSumOfSquares += Math.Pow(i, 2);
+                totalSquareOfSums += i;
             }
 
-            return Math.Pow(totalSquare, 2) - totalSum; 
+            return Math.Pow(totalSquareOfSums, 2) - totalSumOfSquares; 
         }
         #endregion
     }
