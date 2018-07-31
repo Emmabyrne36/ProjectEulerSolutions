@@ -192,7 +192,7 @@ namespace ProjectEuler
             long count = 0;
             for (long i = 2; count < 10001; i++)
             {
-                if (Utilities.isPrime(i)) // use the isPrime method from Problem 3
+                if (Utilities.isPrime(i))
                 {
                     result = i;
                     count++;
@@ -294,6 +294,7 @@ namespace ProjectEuler
         #endregion
 
         //======================================== Problem 10 ==========================================================
+        #region ProjectEuler10
         public static long ProjectEuler10()
         {
             // Find the sum of all the primes below two million
@@ -375,5 +376,6 @@ namespace ProjectEuler
 
             return finalList.ToArray();
         }
+        #endregion
     }
 }
