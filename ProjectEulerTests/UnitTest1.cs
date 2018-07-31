@@ -54,5 +54,23 @@ namespace ProjectectEulerTests
         {
             Assert.Equal(23514624000.ToString(), Problems1_10.ProjectEuler8().ToString());
         }
+
+        [Fact]
+        public void TestIsPythagoreanTriplet()
+        {
+            Assert.True(Problems1_10.IsPythagoreanTriplet(3,4,5));
+        }
+
+        [Fact]
+        public void TestProjectEuler9()
+        {
+            Assert.Equal(31875000.ToString(), Problems1_10.ProjectEuler9().ToString());
+        }
+
+        [Fact]
+        public void TestProjectEuler10()
+        {
+            Assert.Equal(142913828922.ToString(), Problems1_10.ProjectEuler10().ToString());
+        }
     }
 }

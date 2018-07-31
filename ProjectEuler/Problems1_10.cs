@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -55,7 +56,7 @@ namespace ProjectEuler
             List<long> primeFactors = new List<long>();
             for (long i = 2; i <= n; i++)
             {
-                if (isPrime(i))
+                if (Utilities.isPrime(i))
                 {
                     while (n % i == 0)
                     {
@@ -66,21 +67,6 @@ namespace ProjectEuler
             }
             return primeFactors.Max(); // using System.Linq
         }
-
-        public static bool isPrime(long n)
-        {
-            bool primeValue = true;
-            for (long i = 2; i < n; i++)
-            {
-                if (n % i == 0)
-                {
-                    primeValue = false;
-                    break;
-                }
-            }
-            return primeValue;
-        }
-
         #endregion
 
         //======================================== Problem 4 ==========================================================
@@ -206,7 +192,7 @@ namespace ProjectEuler
             long count = 0;
             for (long i = 2; count < 10001; i++)
             {
-                if (isPrime(i)) // use the isPrime method from Problem 3
+                if (Utilities.isPrime(i)) // use the isPrime method from Problem 3
                 {
                     result = i;
                     count++;
@@ -264,5 +250,130 @@ namespace ProjectEuler
             return max;
         }
         #endregion
+
+        //======================================== Problem 9 ==========================================================
+        #region ProjectEuler9
+        public static double ProjectEuler9()
+        {
+            /*
+             * A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a**2 + b**2 = c**2
+             * For example, 3**2 + 4**2 = 9 + 16 = 25 = 5**2. --> a = 3, b = 4, c = 5
+             */
+
+            int c = 0;
+            int final = 1000;
+            int product = 0;
+
+            // a < b < c; therefore a < 1000 / 3,  and a < b < 1000 / 2.
+            for (int a = 1; a < final/3; a ++)
+            {
+                for (int b = a + 1; b < final / 2; b++)
+                {
+                    c = final - a - b; // c is the remainder of 1000 - a - b
+                    if (IsPythagoreanTriplet(a, b, c) && ((a + b + c) == 1000))
+                    {
+                        product = a * b * c;
+                        break;
+                    }
+                }
+            }
+            return product;
+        }
+
+        public static bool IsPythagoreanTriplet(int a, int b, int c)
+        {
+           //  A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a**2 + b**2 = c**2
+            if (a < b && b < c)
+            {
+                if ((Math.Pow(a, 2) + Math.Pow(b, 2)) == Math.Pow(c, 2)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        #endregion
+
+        //======================================== Problem 10 ==========================================================
+        public static long ProjectEuler10()
+        {
+            // Find the sum of all the primes below two million
+            // Implementing the Sieve of Eratosthenes algorithm
+            long[] primeNumbers = OptimizedSieve(2000000);
+
+            long sumValues = 0;
+            for (long i = 0; i < primeNumbers.Length; i++)
+            {
+                sumValues += primeNumbers[i];
+            }
+
+            return sumValues;
+        }
+
+        public static long[] Sieve(int n)
+        {
+            BitArray bitArr = new BitArray(n, true);
+
+            for (int i = 2; i < Math.Sqrt(n); i++)
+            {
+                if (bitArr.Get(i))
+                {
+                    for (int j = i * i; j < n; j += i)
+                    {
+                        bitArr.Set(j, false);
+                    }
+                }
+            }
+
+            List<long> finalList = new List<long>();
+            for (int i = 2; i < bitArr.Length; i++)
+            {
+                if (bitArr.Get(i))
+                {
+                    finalList.Add(i);
+                }
+            }
+
+            return finalList.ToArray();
+        }
+
+        public static long[] OptimizedSieve(int n)
+        {
+            // So, if the number is 9999, we go from 1 to 5000, multiply each number by 2 to make it even and add one.
+            // This gives us a list of all odd numbers, which reduces the iterations through the sieve.
+            /*
+             * eg
+                var upperLimit = 9999;
+                List<Int64> primes = new List<Int64>();
+                for (int x = 2; x <= (upperLimit + 1) / 2; x++)
+                    primes.Add(2 * x + 1);
+            */
+
+            int sieveBound = (n - 1) / 2;
+            BitArray bitArr = new BitArray(sieveBound, true);
+            int limit = ((int)Math.Sqrt(n) - 1) / 2;
+
+            for (int i = 1; i <= limit; i++)
+            {
+                if (bitArr.Get(i))
+                {
+                    for (int j = 2 * i * (i + 1); j < sieveBound; j += 2 * i + 1)
+                    {
+                        bitArr.Set(j, false);
+                    }
+                }
+            }
+
+            List<long> finalList = new List<long>();
+            finalList.Add(2);
+            for (int i = 1; i < bitArr.Length; i++)
+            {
+                if (bitArr.Get(i))
+                {
+                    finalList.Add(2 * i + 1);
+                }
+            }
+
+            return finalList.ToArray();
+        }
     }
 }
