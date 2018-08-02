@@ -64,5 +64,11 @@ namespace ProjectectEulerTests
         {
             Assert.Equal(142913828922, Problems1_10.ProjectEuler10());
         }
+
+        [Fact]
+        public void TestProejctEuler11()
+        {
+            Assert.Equal(70600674, Problems10_20.ProjectEuler11());
+        }
     }
 }
