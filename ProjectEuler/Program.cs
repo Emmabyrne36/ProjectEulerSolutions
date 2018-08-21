@@ -21,6 +21,8 @@ namespace ProjectectEuler
             //Console.WriteLine(Problems1_10.ProjectEuler10());
 
             //Console.WriteLine(Problems10_20.ProjectEuler11());
+            //Console.WriteLine(Problems10_20.ProjectEuler12());
+            Console.WriteLine(Problems10_20.ProjectEuler13());
             Console.ReadLine();
         }
 

@@ -66,9 +66,21 @@ namespace ProjectectEulerTests
         }
 
         [Fact]
-        public void TestProejctEuler11()
+        public void TestProjectEuler11()
         {
             Assert.Equal(70600674, Problems10_20.ProjectEuler11());
+        }
+
+        [Fact]
+        public void TestProjectEuler12()
+        {
+            Assert.Equal(76576500, Problems10_20.ProjectEuler12());
+        }
+
+        [Fact]
+        public void TestProjectEuler13()
+        {
+            Assert.Equal(5537376230, Problems10_20.ProjectEuler13());
         }
     }
 }

@@ -309,34 +309,6 @@ namespace ProjectEuler
 
             return sumValues;
         }
-
-        public static long[] Sieve(int n)
-        {
-            BitArray bitArr = new BitArray(n, true);
-
-            for (int i = 2; i < Math.Sqrt(n); i++)
-            {
-                if (bitArr.Get(i))
-                {
-                    for (int j = i * i; j < n; j += i)
-                    {
-                        bitArr.Set(j, false);
-                    }
-                }
-            }
-
-            List<long> finalList = new List<long>();
-            for (int i = 2; i < bitArr.Length; i++)
-            {
-                if (bitArr.Get(i))
-                {
-                    finalList.Add(i);
-                }
-            }
-
-            return finalList.ToArray();
-        }
-
         public static long[] OptimizedSieve(int n)
         {
             // So, if the number is 9999, we go from 1 to 5000, multiply each number by 2 to make it even and add one.
@@ -371,6 +343,33 @@ namespace ProjectEuler
                 if (bitArr.Get(i))
                 {
                     finalList.Add(2 * i + 1);
+                }
+            }
+
+            return finalList.ToArray();
+        }
+
+        public static long[] Sieve(int n)
+        {
+            BitArray bitArr = new BitArray(n, true);
+
+            for (int i = 2; i < Math.Sqrt(n); i++)
+            {
+                if (bitArr.Get(i))
+                {
+                    for (int j = i * i; j < n; j += i)
+                    {
+                        bitArr.Set(j, false);
+                    }
+                }
+            }
+
+            List<long> finalList = new List<long>();
+            for (int i = 2; i < bitArr.Length; i++)
+            {
+                if (bitArr.Get(i))
+                {
+                    finalList.Add(i);
                 }
             }
 
