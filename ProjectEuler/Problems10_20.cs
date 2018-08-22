@@ -10,6 +10,7 @@ namespace ProjectEuler
     public class Problems10_20
     {
         //======================================== Problem 11 ==========================================================
+        // Largest product in a grid
         #region ProjectEuler11
         public static int ProjectEuler11()
         {
@@ -91,6 +92,7 @@ namespace ProjectEuler
         #endregion
 
         //======================================== Problem 12 ==========================================================
+        // Highly divisible triangular number
         #region ProjectEuler12
         // Formula: n(n+1)/2 where n is the trangular number you want
         // n(n+1) forms the triangle into a rectangle and dividing by 2 finds the dots in the triangle, not the rectangle
@@ -109,6 +111,7 @@ namespace ProjectEuler
 
         public static int NumberOfDivisors(int n)
         {
+            // Calculate the number of divisors the input number has
             int numDivisors = 0;
             int sqrt = (int)Math.Sqrt(n);
 
@@ -131,6 +134,7 @@ namespace ProjectEuler
         #endregion
 
         //======================================== Problem 13 ==========================================================
+        // Large Sum
         #region ProjectEuler13
         public static long ProjectEuler13()
         {
@@ -257,6 +261,7 @@ namespace ProjectEuler
         #endregion
 
         //======================================== Problem 14 ==========================================================
+        // Longest Collatz Sequence
         #region ProjectEuler14
         public static long ProjectEuler14_WithoutCaching() // Takes about 5s to run - not very efficient
         {
@@ -267,7 +272,7 @@ namespace ProjectEuler
             {
                 long count = 0; // reset count to 0 before the method is called
                 GetSequence(i, ref count);
-                // if count is larger than previous, store it and the number
+                // If count is larger than previous, store it and the number
                 if (count >= previousCount)
                 {
                     numberToReturn = i;
@@ -286,7 +291,7 @@ namespace ProjectEuler
             
             else
             {
-                count++; // increase count for each iteration
+                count++; // Increase count for each iteration
                 if (IsEven(n))
                 {
                     return GetSequence(n /= 2, ref count);
@@ -330,19 +335,15 @@ namespace ProjectEuler
 
             long previousCount = 0;
             long numberToReturn = 0;
-            long sequence = 0;
+            long sequenceNumber = 0;
 
             for (long i = 2; i < 1000000; i++)
             {
                 long count = 0; // reset count to 0 before the method is called
-                sequence = i;
-                sequence = GetSequence2(i, sequence, ref count);
+                sequenceNumber = i;
+                sequenceNumber = GetSequence2(i, sequenceNumber, ref count); // use ref count to increase the count for each recursive call - passing by reference so we can access the value outside of the method
                 // Store result in the cache
-                cache[i] = count + cache[sequence];
-                Console.WriteLine("i " + i);
-                Console.WriteLine("count " + count);
-                Console.WriteLine("cache[i] " + cache[i]);
-                Console.WriteLine();
+                cache[i] = count + cache[sequenceNumber];
 
                 // If count (stored in cache[i]) is larger than previous count, store it and the number
                 if (cache[i] > previousCount)
@@ -362,7 +363,7 @@ namespace ProjectEuler
             }
             else
             {
-                count++; // increase count for each iteration
+                count++; // Increase count for each iteration
                 if (IsEven(n))
                 {
                     return GetSequence2(n /= 2, original, ref count);

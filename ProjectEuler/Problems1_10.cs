@@ -169,6 +169,7 @@ namespace ProjectEuler
 
         //======================================== Problem 6 ==========================================================
         #region ProjectEuler6
+            // Sum square difference
         public static double ProjectEuler6()
         {
             double totalSumOfSquares = 0;
@@ -184,6 +185,7 @@ namespace ProjectEuler
         #endregion
 
         //======================================== Problem 7 ==========================================================
+        // 10001st prime number
         #region ProjectEuler7
         public static long ProjectEuler7()
         {
@@ -204,6 +206,7 @@ namespace ProjectEuler
         #endregion
 
         //======================================== Problem 8 ==========================================================
+        // Largest product in a series
         #region ProjectEuler8
         public static long ProjectEuler8()
         {
@@ -252,6 +255,7 @@ namespace ProjectEuler
         #endregion
 
         //======================================== Problem 9 ==========================================================
+        // Special Pythagorean triplet
         #region ProjectEuler9
         public static double ProjectEuler9()
         {
@@ -294,6 +298,7 @@ namespace ProjectEuler
         #endregion
 
         //======================================== Problem 10 ==========================================================
+        // Summation of primes
         #region ProjectEuler10
         public static long ProjectEuler10()
         {
