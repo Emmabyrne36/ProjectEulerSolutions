@@ -256,5 +256,124 @@ namespace ProjectEuler
         }
         #endregion
 
+        //======================================== Problem 14 ==========================================================
+        #region ProjectEuler14
+        public static long ProjectEuler14_WithoutCaching() // Takes about 5s to run - not very efficient
+        {
+            long previousCount = -1;
+            long numberToReturn = 0;
+            
+            for (long i = 2; i < 1000000; i++)
+            {
+                long count = 0; // reset count to 0 before the method is called
+                GetSequence(i, ref count);
+                // if count is larger than previous, store it and the number
+                if (count >= previousCount)
+                {
+                    numberToReturn = i;
+                    previousCount = count;
+                }
+            }
+            return numberToReturn;
+        }
+
+        public static long GetSequence(long n, ref long count)
+        {
+            if (n == 1)
+            {
+                return n;
+            }
+            
+            else
+            {
+                count++; // increase count for each iteration
+                if (IsEven(n))
+                {
+                    return GetSequence(n /= 2, ref count);
+                }
+                else
+                {
+                    return GetSequence(3 * n + 1, ref count);
+                }
+            }
+        }
+
+        public static bool IsEven(long n)
+        {
+            // Check if a number is odd or even
+            if (n % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static long ProjectEuler14_WithCaching() // Takes about 200ms to run - much more efficient
+        {
+            // This method will store the results already calculated so they do not have to be calculated again
+            // Eg: the sequence for the number 13: 13 -> 40 -> 20 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+            // At the third iteration, the number 10 is hit, this is smaller than 13 and so, the sequence length for it has already been calculated
+            // To get the total result, add the length of the sequence already calculated
+            // Here, when 13 is entered into GetSequence(), the method will return 10 - as it does not need to calculate further
+            // Then, we get the value stored in the array for 10 and add on the additional steps (the count) that were completed before 10 was hit in the sequence
+
+            long[] cache = new long[1000001];
+            // Initialise the cache
+            for (int i = 0; i < cache.Length; i++)
+            {
+                cache[i] = -1;
+            }
+            cache[1] = 1;
+
+            long previousCount = 0;
+            long numberToReturn = 0;
+            long sequence = 0;
+
+            for (long i = 2; i < 1000000; i++)
+            {
+                long count = 0; // reset count to 0 before the method is called
+                sequence = i;
+                sequence = GetSequence2(i, sequence, ref count);
+                // Store result in the cache
+                cache[i] = count + cache[sequence];
+                Console.WriteLine("i " + i);
+                Console.WriteLine("count " + count);
+                Console.WriteLine("cache[i] " + cache[i]);
+                Console.WriteLine();
+
+                // If count (stored in cache[i]) is larger than previous count, store it and the number
+                if (cache[i] > previousCount)
+                {
+                    numberToReturn = i;
+                    previousCount = cache[i];
+                }
+            }
+            return numberToReturn;
+        }
+
+        public static long GetSequence2(long n, long original, ref long count)
+        {
+            if (n < original)
+            {
+                return n;
+            }
+            else
+            {
+                count++; // increase count for each iteration
+                if (IsEven(n))
+                {
+                    return GetSequence2(n /= 2, original, ref count);
+                }
+                else
+                {
+                    return GetSequence2(3 * n + 1, original, ref count);
+                }
+            }
+        }
+        #endregion
+
     }
 }

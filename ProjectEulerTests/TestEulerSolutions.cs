@@ -82,5 +82,17 @@ namespace ProjectectEulerTests
         {
             Assert.Equal(5537376230, Problems10_20.ProjectEuler13());
         }
+
+        [Fact]
+        public void TestProjectEuler14_WithoutCaching()
+        {
+            Assert.Equal(837799, Problems10_20.ProjectEuler14_WithoutCaching());
+        }
+
+        [Fact]
+        public void TestProjectEuler14_WithCaching()
+        {
+            Assert.Equal(837799, Problems10_20.ProjectEuler14_WithCaching());
+        }
     }
 }
