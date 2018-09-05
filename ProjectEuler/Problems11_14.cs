@@ -12,6 +12,7 @@ namespace ProjectEuler
         #region ProjectEuler11
         public static int ProjectEuler11()
         {
+            // Ideas for navigating the grid obtained from https://www.mathblog.dk/greatest-product-in-20x20-grid/
             int[,] grid = Grid();
             int numbersToCheck = 4;
             int maxProduct = 0;
@@ -109,6 +110,7 @@ namespace ProjectEuler
 
         public static int NumberOfDivisors(int n)
         {
+            // Ideas for calculating the number of divisors obtained from https://github.com/nayuki/Project-Euler-solutions/blob/master/java/p012.java
             // Calculate the number of divisors the input number has
             int numDivisors = 0;
             int sqrt = (int)Math.Sqrt(n);
@@ -323,6 +325,7 @@ namespace ProjectEuler
             // Here, when 13 is entered into GetSequence(), the method will return 10 - as it does not need to calculate further
             // Then, we get the value stored in the array for 10 and add on the additional steps (the count) that were completed before 10 was hit in the sequence
 
+            // Ideas for the caching solution obtained from https://www.mathblog.dk/project-euler-14/
             long[] cache = new long[1000001];
             // Initialise the cache
             for (int i = 0; i < cache.Length; i++)

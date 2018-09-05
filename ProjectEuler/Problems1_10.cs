@@ -135,6 +135,7 @@ namespace ProjectEuler
         {
             // 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
             // What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+            // Ideas for obtaining the GCD and LCM obtained from http://csharphelper.com/blog/2014/08/calculate-the-greatest-common-divisor-gcd-and-least-common-multiple-lcm-of-two-integers-in-c/
             int res = 1;
             for (int i = 1; i <= 20; i++)
             {
@@ -242,7 +243,7 @@ namespace ProjectEuler
                 long current = 1;
                 foreach (var j in subString)
                 {
-                    current *= (int)Char.GetNumericValue(j);
+                    current *= (int)char.GetNumericValue(j);
                 }
 
                 if (current > max)
@@ -263,7 +264,7 @@ namespace ProjectEuler
              * A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a**2 + b**2 = c**2
              * For example, 3**2 + 4**2 = 9 + 16 = 25 = 5**2. --> a = 3, b = 4, c = 5
              */
-
+            // Ideas fo generating the correct pythagorean tripled obtained from https://www.mathblog.dk/pythagorean-triplets/
             int c = 0;
             int final = 1000;
             int product = 0;
@@ -325,7 +326,7 @@ namespace ProjectEuler
                 for (int x = 2; x <= (upperLimit + 1) / 2; x++)
                     primes.Add(2 * x + 1);
             */
-
+            // Ideas for obtimising the Sive() method below obtained from https://www.mathblog.dk/sum-of-all-primes-below-2000000-problem-10/
             int sieveBound = (n - 1) / 2;
             BitArray bitArr = new BitArray(sieveBound, true);
             int limit = ((int)Math.Sqrt(n) - 1) / 2;

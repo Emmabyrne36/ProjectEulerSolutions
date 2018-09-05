@@ -11,7 +11,7 @@ namespace ProjectEuler
         //======================================== Problem 15 ==========================================================
         // Lattice Paths
         #region ProjectEuler15
-        // https://www.mathblog.dk/project-euler-15/
+        // Ideas for this solution obtained from https://www.mathblog.dk/project-euler-15/
         public static long ProjectEuler15()
         {
             const int gridSize = 20;
@@ -22,10 +22,6 @@ namespace ProjectEuler
                 paths *= (2 * gridSize) - i;
                 paths /= i + 1;
             }
-
-
-
-            Console.WriteLine();
             return paths;
         }
 
