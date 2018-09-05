@@ -37,10 +37,10 @@ namespace ProjectEulerTests
             int[,] grid = { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 } };
             // Get product of values starting in row 0, item 1 and multiplying by numbers 2 to right of it
             // In this case -> 2 * 3 * 4 = 24
-            Assert.Equal(24, Problems10_20.GetProduct(0, 1, 0, 1, 3, grid));
+            Assert.Equal(24, Problems11_14.GetProduct(0, 1, 0, 1, 3, grid));
             // Start at row 1, item 0 and multiply 2 to right
             // 6 * 7 * 8 = 336
-            Assert.Equal(336, Problems10_20.GetProduct(1, 0, 0, 1, 3, grid));
+            Assert.Equal(336, Problems11_14.GetProduct(1, 0, 0, 1, 3, grid));
         }
     }
 }

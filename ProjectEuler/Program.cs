@@ -25,6 +25,9 @@ namespace ProjectectEuler
             //Console.WriteLine(Problems10_20.ProjectEuler13());
             //Console.WriteLine(Problems10_20.ProjectEuler14_WithoutCaching());
             //Console.WriteLine(Problems10_20.ProjectEuler14_WithCaching());
+
+            //Console.WriteLine(Problems15_20.ProjectEuler15());
+            Console.WriteLine(Problems15_20.ProjectEuler16());
             Console.ReadLine();
         }
 

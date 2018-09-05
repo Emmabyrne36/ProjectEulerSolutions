@@ -68,31 +68,43 @@ namespace ProjectectEulerTests
         [Fact]
         public void TestProjectEuler11()
         {
-            Assert.Equal(70600674, Problems10_20.ProjectEuler11());
+            Assert.Equal(70600674, Problems11_14.ProjectEuler11());
         }
 
         [Fact]
         public void TestProjectEuler12()
         {
-            Assert.Equal(76576500, Problems10_20.ProjectEuler12());
+            Assert.Equal(76576500, Problems11_14.ProjectEuler12());
         }
 
         [Fact]
         public void TestProjectEuler13()
         {
-            Assert.Equal(5537376230, Problems10_20.ProjectEuler13());
+            Assert.Equal(5537376230, Problems11_14.ProjectEuler13());
         }
 
         [Fact]
         public void TestProjectEuler14_WithoutCaching()
         {
-            Assert.Equal(837799, Problems10_20.ProjectEuler14_WithoutCaching());
+            Assert.Equal(837799, Problems11_14.ProjectEuler14_WithoutCaching());
         }
 
         [Fact]
         public void TestProjectEuler14_WithCaching()
         {
-            Assert.Equal(837799, Problems10_20.ProjectEuler14_WithCaching());
+            Assert.Equal(837799, Problems11_14.ProjectEuler14_WithCaching());
+        }
+
+        [Fact]
+        public void TestProjectEuler15()
+        {
+            Assert.Equal(137846528820, Problems15_20.ProjectEuler15());
+        }
+
+        [Fact]
+        public void TestProjectEuler16()
+        {
+            Assert.Equal(1366, Problems15_20.ProjectEuler16());
         }
     }
 }

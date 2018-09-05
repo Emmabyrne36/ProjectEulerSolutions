@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace ProjectEuler
 {
-    public class Problems10_20
+    public class Problems11_14
     {
         //======================================== Problem 11 ==========================================================
         // Largest product in a grid
